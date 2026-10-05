@@ -27,7 +27,7 @@ The team app combines React Native, Expo, TypeScript, Swift, ARKit/SceneKit, SQL
 
 ## Inspect and run
 
-See [the developer runbook](tripback/README.md) for setup and the team's device-testing record. Native AR needs an appropriate physical iPhone and Xcode tooling.
+See [the developer runbook](tripback/README.md) for setup and the team's device-testing record. Use Node.js 24 and npm for this portfolio edition; `package-lock.json` is the lockfile checked by CI. The upstream pnpm lockfile is retained as historical team material, not the validated install path. Native AR needs an appropriate physical iPhone and Xcode tooling.
 
 ```bash
 git clone https://github.com/sgon0181/SYNCS-Hack-2026.git
@@ -41,6 +41,8 @@ npm test
 
 Generated historical images are reconstructions, not archival evidence. Cultural-history content requires appropriate consultation before broader use. Client-side model requests should move behind an authenticated backend before wider distribution; no provider key should be committed or shipped in a public app.
 
-Gitleaks found no secrets in the scanned upstream history. This review does not claim a new physical-device or live-provider test. The existing runbook distinguishes compiled native code from outstanding camera-placement checks.
+The 6 October 2026 portfolio pass ran TypeScript checking and all 10 domain tests successfully. Compatible npm dependency updates were applied, and CI reproduces these checks without provider credentials. These are post-hackathon maintenance changes. They do not verify native compilation, physical-device behavior, camera placement, or a live provider.
+
+Gitleaks found no secrets in the scanned upstream history. After compatible updates, npm audit still reports 30 dependency findings (20 high and 10 moderate), including Expo/Metro tooling and Vitest dependencies. This is not a clean security audit. Suggested breaking framework downgrades were not applied, and the app is not ready for public distribution. The existing runbook distinguishes compiled native code from outstanding camera-placement checks.
 
 This is a team prototype, not a production release. Code and media retain their original authorship and terms. No repository-wide license was found; this fork grants no rights on behalf of the team or media owners.
